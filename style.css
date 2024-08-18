@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    font-family: cursive;
+}
+
+body{
+    background-color: rgb(48, 140, 246);
+}
+
+#head1{
+    margin-top: 100px;
+    margin-left: 300px;
+    color: white;
+    font-size: 70px;
+}
+
+#head2{
+    font-size: 70px;
+    margin-left: 300px;
+    color: green;
+    text-decoration: underline;
+}
+#input{
+    margin-top: 30px;
+    margin-left: 300px;
+    width: 450px;
+    font-size: 30px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+#btn{
+    margin-top: 30px;
+    margin-left: 300px;
+    display: block;
+    font-size: 30px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: green;
+    cursor: pointer;
+}
+#img{
+    position: absolute;
+    margin-left: 10px;
+    top: 318px;
+    cursor: pointer;
+}
+
+/* toast notifactions css */
+
+#buttons{
+    margin: 60px;
+}
+
+#Successbtn,#Errorbtn,#Invalidbtn{
+    width: 150px;
+    height: 40px;
+    background-color: #212121;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+#toastContainer{
+    position: absolute;
+    bottom: 10%;
+    right: 30px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.successdiv,.Errordiv,.Invaliddiv{
+    position: relative;
+    margin-top: 20px;
+    width: 400px;
+    height: 70px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.successImg,.ErrorImg,.InvalidImg{
+    display: inline;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.successText,.ErrorText,.InvalidText{
+    display: inline;
+    margin-top: 20px;
+    padding-right: 55px;
+}
+
+.successdiv::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: green; 
+    animation: anim 5s linear forwards;
+}
+
+.Errordiv::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: yellow; 
+    animation: anim 5s linear forwards;
+}
+
+.Invaliddiv::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: red; 
+    animation: anim 5s linear forwards;
+}
+
+@keyframes anim {
+    100%{
+        width: 0;
+    }
+}
